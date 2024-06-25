@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        .histogram-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .histogram-container img {
+            margin: 0 10px;
+        }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="histogram-container">
+    <img id="red" th:src="'data:image/png;base64,' + ${red}" alt="Red Histogram"/>
+    <img id="green" th:src="'data:image/png;base64,' + ${green}" alt="Green Histogram"/>
+    <img id="blue" th:src="'data:image/png;base64,' + ${blue}" alt="Blue Histogram"/>
+</div>
+<div class="image-container">
+    <img id="image" th:src="'data:image/png;base64,' + ${image}" alt="Original Image"/>
+</div>
+</body>
+</html>
